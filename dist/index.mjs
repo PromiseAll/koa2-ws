@@ -53,7 +53,7 @@ var require_src = __commonJS({
       };
       return fn;
     };
-    var createWs = ({ wsName = "ws", clearOfflineWs = true, heartbeatTime = 1e3, wsOptions = {} } = {}) => {
+    var createWs = ({ wsName = "ws", clearOfflineWs = true, heartbeatTime = 3e3, wsOptions = {} } = {}) => {
       const wsServer = new WebSocketServer({ ...wsOptions, noServer: true });
       wsServerMap.set(wsName, wsServer);
       const middleware = createMiddleware(wsServer);
