@@ -1,0 +1,52 @@
+{
+  "name": "koa2-ws",
+  "version": "1.0.0",
+  "description": "一个 基于koa 的 ws 模块,检测在线用户，广播消息等功能，支持 cjs 和 esm",
+  "main": "./dist/index.js",
+  "scripts": {
+    "build": "tsup ./src/index.ts --format esm,cjs --dts"
+  },
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "default": "./dist/index.mjs"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PromiseAll/koa2-ws.git"
+  },
+  "keywords": [
+    "koa",
+    "koa2",
+    "ws",
+    "websocket",
+    "middleware",
+    "client",
+    "upgrade"
+  ],
+  "author": "PromiseAll",
+  "license": "",
+  "bugs": {
+    "url": "https://github.com/PromiseAll/koa2-ws/issues"
+  },
+  "homepage": "https://github.com/PromiseAll/koa2-ws#readme",
+  "dependencies": {
+    "ws": "^8.10.0"
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.7",
+    "@types/ws": "^8.5.3",
+    "koa": "^2.13.4",
+    "koa-router": "^12.0.0",
+    "tsup": "^6.3.0",
+    "typescript": "^4.8.4"
+  },
+  "files": [
+    "dist/",
+    "src/",
+    "package.json",
+    "README.md"
+  ]
+}
